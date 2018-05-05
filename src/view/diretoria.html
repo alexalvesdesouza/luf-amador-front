@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR" ng-app="app" ng-controller="appCtrl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Diretoria</title>
+    <link rel="shortcut icon" href="/assets/logos-site/favicon.ico">
+    <!-- Bootstrap -->
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/styles.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div ng-include="'/templates/header.html'"></div>
+    <div ng-include="'/templates/menu.html'"></div>
+    <header class="content-header my-2">
+        <h1 class="text-left PageTitleHeader">Diretoria</h1>
+    </header>
+
+    <div class="Conteudo">
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-6 mb-4">
+
+                <div class="card CardCallToAction">
+                    <div class="card-body text-center">
+                        <h4 class="card-title">Diretor</h4>
+                        <p class="card-text">
+                            <img class="card-img-top" src="/assets/diretoria/diretor.jpg" alt="Card image cap">
+                        </p>
+
+                        <a class="card-link" href="#">Link</a>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 mb-4">
+
+                <div class="card CardCallToAction">
+                    <div class="card-body text-center">
+                        <h4 class="card-title">Vice Diretor</h4>
+                        <p class="card-text">
+                            <img class="card-img-top" src="/assets/diretoria/vice-diretor.jpg" alt="Card image cap">
+                        </p>
+
+                        <a class="card-link" href="#">Link</a>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div ng-include="'/templates/footer.html'"></div>
+    <div ng-include="'/templates/after-footer.html'"></div>
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/angular.min.js"></script>
+    <script src="/app.js"></script>
+
+</body>
+
+</html>

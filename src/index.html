@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-BR" ng-app="app" ng-controller="appCtrl">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title ng-bind="titulo"></title>
+  <link rel="shortcut icon" href="/assets/logos-site/favicon.ico">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <link href="/css/bootstrap.css" rel="stylesheet">
+  <link href="/css/styles.css" rel="stylesheet">
+  <style>
+    @-webkit-keyframes swing {
+      15% {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+      }
+      30% {
+        -webkit-transform: translateX(-5px);
+        transform: translateX(-5px);
+      }
+      50% {
+        -webkit-transform: translateX(3px);
+        transform: translateX(3px);
+      }
+      65% {
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+      }
+      80% {
+        -webkit-transform: translateX(2px);
+        transform: translateX(2px);
+      }
+      100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes swing {
+      15% {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+      }
+      30% {
+        -webkit-transform: translateX(-5px);
+        transform: translateX(-5px);
+      }
+      50% {
+        -webkit-transform: translateX(3px);
+        transform: translateX(3px);
+      }
+      65% {
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+      }
+      80% {
+        -webkit-transform: translateX(2px);
+        transform: translateX(2px);
+      }
+      100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+      }
+    }
+
+    .swing:hover {
+      -webkit-animation: swing 1s ease;
+      animation: swing 1s ease;
+      -webkit-animation-iteration-count: 1;
+      animation-iteration-count: 1;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div ng-include="'/templates/header.html'"></div>
+  <div ng-include="'/templates/menu.html'"></div>
+  <header class="content-header my-2">
+    <h1 class="text-left PageTitleHeader">Principal</h1>
+  </header>
+
+  <div class="container">
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100 ImgCarousel" src="/assets/campeoes/slide1.jpg" alt="First slide">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Campeão Divisão Especial</h5>
+            <p class="text-danger">Este é o capeão do campeonado Amador divisão Especial de 2017</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100 ImgCarousel" src="/assets/campeoes/slide2.jpg" alt="Second slide">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Campeão Divisão Acesso</h5>
+            <p class="text-danger">Este é o capeão do campeonado Amador divisão Acesso de 2017</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100 ImgCarousel" src="/assets/campeoes/slide3.jpg" alt="Third slide">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Campeão Juniores</h5>
+            <p class="text-danger">Este é o capeão do campeonado de Juniores de 2017</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100 ImgCarousel" src="/assets/campeoes/slide4.jpg" alt="Quarto slide">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Campeão Veteranos</h5>
+            <p class="text-danger">Este é o capeão do campeonado Veteranos de 2017</p>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+  </div>
+
+  <div class="row" style="margin-top: 20px;">
+    <div class="col-md-4 col-xs-12">
+
+      <h3 style="text-align: center;">
+        <i class="material-icons">spa</i>
+      </h3>
+      <h3 style="text-align: center;">
+        <span class="TituloConceitos">Missão</span>
+      </h3>
+      <div class="card-body text-justify">
+        <p>A LUF tem por finalidade planejar, organizar, dirigir, orientar, supervisionar, disciplinar, coordenar e proporcionar
+          aos seus associados e a sociedade em geral a difusão da prática de atividade esportiva; entretenimento, o lazer;
+          a inclusão social e outros benefícios de acordo com a legislação vigente, através do desporto de caráter amador,
+          promovendo e incentivando nas diversas modalidades e categorias possíveis.</p>
+      </div>
+    </div>
+    <div class="col-md-4 col-xs-12">
+      <h3 style="text-align: center;">
+        <i class="material-icons">whatshot</i>
+      </h3>
+      <h3 style="text-align: center;">
+        <span class="TituloConceitos">Valores</span>
+      </h3>
+      <p style="text-align: center;">Ética – Transparência – Compromisso – Profissionalismo</p>
+      <p style="text-align: center;"></p>
+    </div>
+    <div class="col-md-4 col-xs-12">
+      <h3 style="text-align: center;">
+        <i class="material-icons">grade</i>
+      </h3>
+      <h3 style="text-align: center;">
+        <span class="TituloConceitos">Serviços</span>
+      </h3>
+      <p style="text-align: center;">Planejamento, organização e execução de Futebol Amador.</p>
+      <p style="text-align: center;"></p>
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-4 mb-4">
+      <section>
+        <div class="card-body text-justify">
+          <h4 class="card-title">Nota Oficial 003/2018</h4>
+
+          Novo curso de formação de arbitros de futebol patrocinado pela LUF – Liga Uberlandense de futebol em parceria com a FMF –
+          Federação Mineira de Futebol. O Curso tem como objetivo formar novos profissionais de arbitragem, e reciclar os
+          atuais arbitros, com o intuito de reforçar o quadro de arbitros da LUF e de melhorar ainda mais a qualidade nos
+          jogos dos campenatos organizados pla LUF. Fale com a LUF e informe-se. Fone: (034) 3232-0822
+          <p>
+            <strong>E-mail:</strong>
+            <a class="card-link" href="#">contato@lufamador.com.br</a>
+          </p>
+
+        </div>
+      </section>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4 mb-4">
+      <section>
+        <div class="card-body text-center">
+          <div class="center-block">           
+              <h4>Parceiros</h4>           
+          </div>
+            <div id="carouselParceiros" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img class="ImgCarouselParceiros swing" src="/assets/parceiros/wm_fifa_logo.jpg" alt="Third slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="ImgCarouselParceiros swing" src="/assets/parceiros/logo_branneve.jpg" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="ImgCarouselParceiros swing" src="/assets/parceiros/logo_cbf.jpg" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="ImgCarouselParceiros swing" src="/assets/parceiros/logo_fifa.jpg" alt="Third slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="ImgCarouselParceiros swing" src="/assets/parceiros/logo_fmf.jpg" alt="Third slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="ImgCarouselParceiros swing" src="/assets/parceiros/logo_futel_2009.jpg" alt="Third slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="ImgCarouselParceiros swing" src="/assets/parceiros/logo_imperio.jpg" alt="Third slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="ImgCarouselParceiros swing" src="/assets/parceiros/MARCA START QUIMICA.jpg" alt="Third slide">
+                </div>
+                <div class="carousel-item">
+                  <img class="ImgCarouselParceiros swing" src="/assets/parceiros/politriz-uberlandia.jpg" alt="Third slide">
+                </div>
+              </div>
+            </div>
+        </div>
+      </section>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-4 mb-4">
+      <section>
+        <div class="card-body text-center">
+          <h4 class="card-title">Intitucional</h4>
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe src="https://www.youtube.com/embed/l3XhDEemnFo?ecver=2" class="" frameborder="1" allow="autoplay; encrypted-media"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <div ng-include="'/templates/footer.html'"></div>
+  <div ng-include="'/templates/after-footer.html'"></div>
+
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/popper.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/angular.min.js"></script>
+  <script src="app.js"></script>
+
+</body>
+
+</html>

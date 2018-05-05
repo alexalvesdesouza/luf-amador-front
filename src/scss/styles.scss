@@ -1,0 +1,108 @@
+//Declaração das variáveis
+$primary: #E74C3C;
+$body-bg: #f2f2f2;
+$sucess: green;
+.Footer {
+    background-color: #E74C3C !important;
+    min-height: 150px;
+    color: #FFFFFF;
+}
+
+.container {
+    max-width: 90% !important;
+}
+
+.dropdown-item:hover {
+    background-color: #0081b9 !important;
+}
+
+.ContentHeader {
+    margin-top: -10px;
+}
+
+.content-header {
+    background-color: #E74C3d;
+    color: #FFFFFF;
+}
+
+.ContentHeaderTitle {
+    margin-left: 1px;
+}
+
+.NavMenu {
+    background-color: #0081b9 !important;
+}
+
+.PageTitleHeader {
+    margin-left: 0.3em;
+    ;
+}
+
+.after-footer {
+    background: #0081b9;
+    color: #FFFFFF;
+    min-height: 50px;
+    a {
+        color: #1a37c7;
+    }
+}
+
+.card-text {
+    text-justify: auto !important;
+}
+
+.InstitucionalIFrame {
+    max-width: 50%;
+    max-height: 50%;
+}
+
+.carousel-caption h5 {
+    color: #0081b9;
+    font-weight: bold;
+    font-size: 3.25rem;
+}
+
+.carousel-caption p {
+    color: #0081b9;
+    font-weight: bold;
+    font-size: 2.25rem;
+}
+
+.card.CardCallToAction {
+    background-color: #f2f2f2 !important;
+}
+
+.material-icons {
+    font-size: 50px;
+    color: #E74C3d;
+}
+
+.TituloConceitos {
+    color: #E74C3d;
+}
+
+.item img {
+    width: 60% !important;
+}
+
+.ImgCarousel {
+    max-height: 500px;
+}
+
+.ImgCarouselParceiros {
+    max-height: 180px;
+    max-width: 300px;
+}
+
+.ImgCarouselParceiros:hover {
+    max-height: 190px;
+    max-width: 310px;
+}
+
+.MarginLeft25 {
+    margin-left: 25% !important;
+}
+
+
+//importação do bootstrap
+@import 'node_modules/bootstrap/scss/bootstrap';

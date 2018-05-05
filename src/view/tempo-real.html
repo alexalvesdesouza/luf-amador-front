@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR" ng-app="app" ng-controller="appCtrl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tempo Real</title>
+    <link rel="shortcut icon" href="/assets/logos-site/favicon.ico">
+
+    <!-- Bootstrap -->
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/styles.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="">
+
+        <div ng-include="'/templates/header.html'"></div>
+        <div ng-include="'/templates/menu.html'"></div>
+        <header class="content-header my-2">
+            <h1 class="text-left PageTitleHeader">Tempo Real</h1>
+        </header>
+
+        <div class="Conteudo container">
+
+                <div class="row">
+                    <select class="form-control">
+                        <option value="" ng-disabled="true" ng-selected="true">Selecione um campeonato</option>
+                        <option>Amador - Especial</option>
+                        <option>Amador - Acesso</option>
+                        <option>Juniores</option>
+                        <option>Veteranos</option>
+                        <option>Rural</option>
+                    </select>
+                </div>
+    
+                <div class="table-responsive-xl">
+                    <table class="table table-hover table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">Confronto</th>
+                                <th scope="col">Local</th>
+                                <th scope="col">Situação</th>
+                                <th scope="col">Tempo</th>
+                                <th scope="col">Campeonato</th>
+                               
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="disputa in disputas">
+    
+                                <td>
+                                    <span ng-bind="disputa.confronto"></span>
+                                </td>
+                                <td>
+                                    <span ng-bind="disputa.local"></span>
+                                </td>
+                                <td>
+                                    <span ng-bind="disputa.situacao"></span>
+                                </td>
+                                <td>
+                                    <span ng-bind="disputa.tempo"></span>
+                                </td>
+                                <td>
+                                    <span ng-bind="disputa.campeonato"></span>
+                                </td>
+                                
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+    
+            </div>
+
+        <div ng-include="'/templates/footer.html'"></div>
+        <div ng-include="'/templates/after-footer.html'"></div>
+
+    </div>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/angular.min.js"></script>
+    <script src="/app.js"></script>
+
+</body>
+
+</html>
