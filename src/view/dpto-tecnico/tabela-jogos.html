@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR" ng-app="dptoTecnico" ng-controller="dptoTecnicoCtrl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tabela dos Jogos</title>
+    <link rel="shortcut icon" href="/assets/logos-site/favicon.ico">
+    <!-- Bootstrap -->
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/styles.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="">
+
+        <div ng-include="'/templates/header.html'"></div>
+        <div ng-include="'/templates/menu.html'"></div>
+        <header class="content-header my-2">
+            <h1 class="text-left PageTitleHeader">Tagela dos Jogos</h1>
+        </header>
+
+        <div class="Conteudo container">
+            <div class="row">
+                <select class="form-control">
+                    <option value="" ng-disabled="true" ng-selected="true">Selecione um campeonato</option>
+                    <option>Amador - Especial</option>
+                    <option>Amador - Acesso</option>
+                    <option>Juniores</option>
+                    <option>Veteranos</option>
+                    <option>Rural</option>
+                </select>
+            </div>
+
+            <div class="table-responsive-xl">
+                <table class="table table-hover table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Data</th>
+                            <th scope="col">Hora</th>
+                            <th scope="col">Local</th>
+                            <th scope="col">Equipe A</th>
+                            <!-- <th scope="col">Esc</th> -->
+                            <th scope="col">PLA</th>
+                            <th scope="col">PLB</th>
+                            <!-- <th scope="col">Esc</th> -->
+                            <th scope="col">Equipe B</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="jogo in tabelaJogos">
+
+                            <td>
+                                <span ng-bind="jogo.dataPartida"></span>
+                            </td>
+                            <td>
+                                <span ng-bind="jogo.horario"></span>
+                            </td>
+                            <td>
+                                <span ng-bind="jogo.local"></span>
+                            </td>
+                            <td>
+                                <span ng-bind="jogo.equipeA.nome"></span>
+                            </td>
+                            <!-- <td>
+                            <img src="/assets/agremiacoes/{{jogo.equipeA.nomeSigla}}.png" alt="" height="30" width="30">
+                        </td> -->
+                            <td>
+                                <span ng-bind="jogo.golsEquipeA"></span>
+                            </td>
+                            <td>
+                                <span ng-bind="jogo.golsEquipeB"></span>
+                            </td>
+                            <!-- <td>
+                            <img src="/assets/agremiacoes/{{jogo.equipeB.nomeSigla}}.png" alt="" height="30" width="30">
+                        </td> -->
+                            <td>
+                                <span ng-bind="jogo.equipeB.nome"></span>
+                            </td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <div ng-include="'/templates/footer.html'"></div>
+    <div ng-include="'/templates/after-footer.html'"></div>
+
+    </div>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/angular.min.js"></script>
+    <script src="/scripts/dpto-tecnico.js"></script>
+</body>
+
+</html>
