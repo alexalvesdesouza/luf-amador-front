@@ -76,6 +76,10 @@
 .MarginLeft25 {
   margin-left: 25% !important; }
 
+.nav-link {
+  color: #FFF !important;
+  font-size: 23px; }
+
 /*!
  * Bootstrap v4.1.1 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors

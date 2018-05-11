@@ -6,7 +6,8 @@ dptoTecnico.controller("dptoTecnicoCtrl", function ($scope, $filter, $http) {
 
     $scope.tabelaJogos = [];
     $scope.tabelaCampeonato = {};
-    const BASE_PATH = "http://localhost:9090/tabela-jogos";
+    const BASE_PATH = "/tabela-jogos";
+    //const BASE_PATH = "http://198.58.119.136:9090/tabela-jogos";
 
     var carregarTabelasJogos = function () {
         $http

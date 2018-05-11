@@ -38,32 +38,26 @@
                 <table class="table table-hover table-striped">
                     <thead>
                         <tr>
-                            <th scope="col">Pos.</th>
-                            <th scope="col">Esc.</th>
+                            <th scope="col">Posição</th>
+                            <th scope="col">Escudo</th>
                             <th scope="col">Equipe</th>
-                            <th scope="col">JG</th>
-                            <th scope="col">PT</th>
-                            <th scope="col">VT</th>
-                            <th scope="col">EM</th>
-                            <th scope="col">DR</th>
-                            <th scope="col">GP</th>
-                            <th scope="col">GC</th>
-                            <th scope="col">SD</th>
-                            <th scope="col">Aproveitamento</th>
+                            <th scope="col">JG - Jogos</th>
+                            <th scope="col">PT - Pontos</th>
+                            <th scope="col">VT - Vitórias</th>
+                            <th scope="col">GP - Gols Pró</th>
+                            <th scope="col">GC - Gols Contra</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr ng-repeat="classificacao in classificacoes">
-
                             <td>
-                                <span ng-bind="classificacao.posicao"></span>
+                                <span ng-bind="classificacao.qtdJogos"></span>
                             </td>
                             <td>
-                                <img src="/assets/agremiacoes/{{classificacao.time}}.png" alt=""
-                                height="30" width="30">
+                                <img src="/assets/agremiacoes/{{classificacao.agremiacao.nomeSigla}}.png" alt="" height="30" width="30">
                             </td>
                             <td>
-                                <span ng-bind="classificacao.time"></span>
+                                <span ng-bind="classificacao.agremiacao.nome"></span>
                             </td>
                             <td>
                                 <span ng-bind="classificacao.qtdJogos"></span>
@@ -75,24 +69,11 @@
                                 <span ng-bind="classificacao.qtdVitorias"></span>
                             </td>
                             <td>
-                                <span ng-bind="classificacao.qtdEmpates"></span>
-                            </td>
-                            <td>
-                                <span ng-bind="classificacao.qtdDerrotas"></span>
-                            </td>
-                            <td>
                                 <span ng-bind="classificacao.golsPro"></span>
                             </td>
                             <td>
                                 <span ng-bind="classificacao.golsContra"></span>
                             </td>
-                            <td>
-                                <span ng-bind="classificacao.saldoGol"></span>
-                            </td>
-                            <td>
-                                <span>100%</span>
-                            </td>
-
                         </tr>
                     </tbody>
                 </table>
