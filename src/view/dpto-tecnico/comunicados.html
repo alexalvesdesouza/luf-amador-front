@@ -22,11 +22,28 @@
         </header>
 
         <div class="Conteudo">
+            <div class="row">
 
+                <div class="col-xs-12 col-sm-6 col-md-2 mb-4" ng-repeat="comunicado in comunicados">
+
+                    <div class="card CardCallToAction">
+                        <div class="card-body text-center">
+                            <h4 class="card-title" ng-bind="comunicado.numero"></h4>
+                            <p class="card-text">
+                                {{comunicado.descricao}}
+                            </p>
+
+                            <a class="card-link" href="{{comunicado.link}}" target="_blank">Ver Comunicado</a>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </div>
 
         <div ng-include="'/templates/footer.html'"></div>
-        <div  ng-include="'/templates/after-footer.html'"></div>
+        <div ng-include="'/templates/after-footer.html'"></div>
 
     </div>
     <script src="/js/jquery.min.js"></script>

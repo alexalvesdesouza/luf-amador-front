@@ -22,7 +22,24 @@
         </header>
 
         <div class="Conteudo">
+            <div class="row">
 
+                <div class="col-xs-12 col-sm-6 col-md-2 mb-4" ng-repeat="defesa in defesas">
+
+                    <div class="card CardCallToAction">
+                        <div class="card-body text-center">
+                            <h4 class="card-title" ng-bind="defesa.numero"></h4>
+                            <p class="card-text">
+                                {{defesa.descricao}}
+                            </p>
+
+                            <a class="card-link" href="{{defesa.link}}" target="_blank">Ver Defesa mendos vasada</a>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </div>
 
         <div ng-include="'/templates/footer.html'"></div>

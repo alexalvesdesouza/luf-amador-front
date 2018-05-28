@@ -18,11 +18,28 @@
         <div ng-include="'/templates/header.html'"></div>
         <div ng-include="'/templates/menu.html'"></div>
         <header class="content-header my-2">
-            <h1 class="text-left PageTitleHeader">ARtilharia</h1>
+            <h1 class="text-left PageTitleHeader">Artilharia</h1>
         </header>
 
         <div class="Conteudo">
+            <div class="row">
 
+                <div class="col-xs-12 col-sm-6 col-md-2 mb-4" ng-repeat="artilharia in artilharias">
+
+                    <div class="card CardCallToAction">
+                        <div class="card-body text-center">
+                            <h4 class="card-title" ng-bind="artilharia.numero"></h4>
+                            <p class="card-text">
+                                {{artilharia.descricao}}
+                            </p>
+
+                            <a class="card-link" href="{{artilharia.link}}" target="_blank">Ver Artilharia</a>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </div>
 
         <div ng-include="'/templates/footer.html'"></div>

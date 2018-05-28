@@ -22,7 +22,24 @@
         </header>
 
         <div class="Conteudo">
+                <div class="row">
 
+                        <div class="col-xs-12 col-sm-6 col-md-2 mb-4" ng-repeat="nota in notasOficiais">
+        
+                            <div class="card CardCallToAction">
+                                <div class="card-body text-center">
+                                    <h4 class="card-title" ng-bind="nota.numero"></h4>
+                                    <p class="card-text">
+                                        {{nota.descricao}}
+                                    </p>
+        
+                                    <a class="card-link" href="{{nota.link}}" target="_blank">Ver Nota Oficial</a>
+        
+                                </div>
+                            </div>
+        
+                        </div>
+                    </div>
         </div>
 
         <div ng-include="'/templates/footer.html'"></div>
