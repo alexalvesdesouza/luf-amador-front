@@ -22,7 +22,23 @@
         </header>
 
         <div class="Conteudo">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-2 mb-4" ng-repeat="edital in editais">
 
+                    <div class="card CardCallToAction">
+                        <div class="card-body text-center">
+                            <h4 class="card-title" ng-bind="edital.numero"></h4>
+                            <p class="card-text">
+                                {{edital.descricao}}
+                            </p>
+
+                            <a class="card-link" href="{{edital.link}}" target="_blank">Ver Edital</a>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </div>
 
         <div ng-include="'/templates/footer.html'"></div>

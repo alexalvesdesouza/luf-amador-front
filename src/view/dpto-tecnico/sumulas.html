@@ -22,7 +22,24 @@
         </header>
 
         <div class="Conteudo">
+                <div class="row">
 
+                        <div class="col-xs-12 col-sm-6 col-md-2 mb-4" ng-repeat="sumula in sumulas">
+        
+                            <div class="card CardCallToAction">
+                                <div class="card-body text-center">
+                                    <h4 class="card-title" ng-bind="sumula.numero"></h4>
+                                    <p class="card-text">
+                                        {{sumula.descricao}}
+                                    </p>
+        
+                                    <a class="card-link" href="{{sumula.link}}" target="_blank">Ver Súmula</a>
+        
+                                </div>
+                            </div>
+        
+                        </div>
+                    </div>
         </div>
 
         <div ng-include="'/templates/footer.html'"></div>

@@ -5,8 +5,8 @@ classificacao.controller("classificacaoCtrl", function ($scope, $filter, $http, 
     $scope.headerContent = 'Classificação';
     $scope.classificacoes = [];
     
-    const BASE_PATH = "/classificacoes";
-    //const BASE_PATH = "http://198.58.119.136:9090/classificacoes";
+    //const BASE_PATH = "http://localhost:9090/classificacoes";
+    const BASE_PATH = "http://198.58.119.136:9090/classificacoes";
 
     var carregarClassificacao = function () {
         $http
