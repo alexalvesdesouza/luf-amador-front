@@ -5,9 +5,9 @@ dptoTecnico.controller("dptoTecnicoCtrl", function ($scope, $filter, $http) {
     $scope.headerContent = 'Tabela Jogos';
 
     $scope.tabelaJogos = [];
+    $scope.resultadoJogos = [];
     $scope.editais = [];
-    $scope.artilharias = [];
-    $scope.defesas = [];
+    $scope.artilhariasDefesas = [];
     $scope.comunicados = [];
     $scope.notasOficiais = [];
     $scope.sumulas = [];
@@ -16,7 +16,9 @@ dptoTecnico.controller("dptoTecnicoCtrl", function ($scope, $filter, $http) {
     $scope.tabelaCampeonato = {};
     //const BASE_PATH_TECNICO = "http://localhost:9090/departamento-tecnico";
     //const BASE_PATH_TABELA = "http://localhost:9090/tabela-jogos";
+    //const BASE_PATH_JOGOS = "http://localhost:9090/jogos";
     const BASE_PATH_TABELA = "http://198.58.119.136:9090/tabela-jogos";
+    const BASE_PATH_JOGOS = "http://198.58.119.136:9090/jogos";
     const BASE_PATH_TECNICO = "http://198.58.119.136:9090/departamento-tecnico";
 
     var carregarEditais = function () {
@@ -32,24 +34,12 @@ dptoTecnico.controller("dptoTecnicoCtrl", function ($scope, $filter, $http) {
             });
     };
 
-    var carregarDefesas = function () {
+    var carregarArtilhariasDefesa = function () {
         $http
-            .get(BASE_PATH_TECNICO + "/defesa")
+            .get(BASE_PATH_TECNICO + "/artilharia-defesa")
             .success(function (ret) {
-                $scope.defesas = [];
-                $scope.defesas = ret;
-            })
-            .error(function (data, status) {
-                // Handle HTTP error
-                console.log(data);
-            });
-    };
-    var carregarArtilharias = function () {
-        $http
-            .get(BASE_PATH_TECNICO + "/artilharia")
-            .success(function (ret) {
-                $scope.artilharias = [];
-                $scope.artilharias = ret;
+                $scope.artilhariasDefesas = [];
+                $scope.artilhariasDefesas = ret;
             })
             .error(function (data, status) {
                 // Handle HTTP error
@@ -107,8 +97,21 @@ dptoTecnico.controller("dptoTecnicoCtrl", function ($scope, $filter, $http) {
                 // Handle HTTP error
                 console.log(data);
             });
+    };
 
-
+    var carregarResultadoJogos = function () {
+        $http
+            .get(BASE_PATH_JOGOS + '/resultados')
+            .success(function (ret) {
+                $scope.resultadoJogos = [];
+                if (ret.length) {
+                    $scope.resultadoJogos = ret;
+                }
+            })
+            .error(function (data, status) {
+                // Handle HTTP error
+                console.log(data);
+            });
     };
 
     $scope.abaSelecionada = function (abaSelecionada) {
@@ -117,8 +120,7 @@ dptoTecnico.controller("dptoTecnicoCtrl", function ($scope, $filter, $http) {
         if (abaSelecionada === 'inscricoes') {
             $scope.inscricoesAbertas = true;
             carregarCampeonatos();
-            return;
-        };
+        }
     };
 
     carregarTabelasJogos();
@@ -126,7 +128,7 @@ dptoTecnico.controller("dptoTecnicoCtrl", function ($scope, $filter, $http) {
     carregarSumulas();
     carregarComunicados();
     carregarNotasOficiais();
-    carregarArtilharias();
-    carregarDefesas();
+    carregarArtilhariasDefesa();
+    carregarResultadoJogos();
 
 });

@@ -40,11 +40,12 @@
                             <th scope="col">Data</th>
                             <th scope="col">Hora</th>
                             <th scope="col">Local</th>
-                            <th scope="col">Equipe A</th>
+                            <th scope="col">Agremiacao A</th>
                             <th scope="col">Esc</th>
                             <th></th>
                             <th scope="col">Esc</th>
-                            <th scope="col">Equipe B</th>
+                            <th scope="col">Agremiacao B</th>
+                            <th>Chave</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -54,23 +55,26 @@
                                 <span ng-bind="jogo.dataPartida"></span>
                             </td>
                             <td>
-                                <span ng-bind="jogo.horario"></span>
+                                <span ng-bind="jogo.horarioPartida"></span>
                             </td>
                             <td>
-                                <span ng-bind="jogo.local.nome"></span>
+                                <span ng-bind="jogo.local"></span>
                             </td>
                             <td>
-                                <span ng-bind="jogo.equipeA.nome"></span>
+                                <span ng-bind="jogo.agremiacaoA.nome"></span>
                             </td>
                             <td>
-                                <img src="/assets/agremiacoes/{{jogo.equipeA.nomeSigla}}.png" alt="" height="30" width="30">
+                                <img src="/assets/agremiacoes/{{jogo.agremiacaoA.nomeSigla}}.png" alt="" height="30" width="30">
                             </td>
                             <td>X</td>                            
                             <td>
-                                <img src="/assets/agremiacoes/{{jogo.equipeB.nomeSigla}}.png" alt="" height="30" width="30">
+                                <img src="/assets/agremiacoes/{{jogo.agremiacaoB.nomeSigla}}.png" alt="" height="30" width="30">
                             </td>
                             <td>
-                                <span ng-bind="jogo.equipeB.nome"></span>
+                                <span ng-bind="jogo.agremiacaoB.nome"></span>
+                            </td>
+                            <td>
+                                <span ng-bind="jogo.chave"></span>
                             </td>
 
                         </tr>

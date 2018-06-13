@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Defesa menos vasada</title>
+    <title>Artilharia</title>
     <link rel="shortcut icon" href="/assets/logos-site/favicon.ico">
     <!-- Bootstrap -->
     <link href="/css/bootstrap.css" rel="stylesheet">
@@ -18,22 +18,22 @@
         <div ng-include="'/templates/header.html'"></div>
         <div ng-include="'/templates/menu.html'"></div>
         <header class="content-header my-2">
-            <h1 class="text-left PageTitleHeader">Defesa menos vasada</h1>
+            <h1 class="text-left PageTitleHeader">Artilharia</h1>
         </header>
 
         <div class="Conteudo">
             <div class="row">
 
-                <div class="col-xs-12 col-sm-6 col-md-2 mb-4" ng-repeat="defesa in defesas">
+                <div class="col-xs-12 col-sm-6 col-md-2 mb-4" ng-repeat="item in artilhariasDefesas">
 
                     <div class="card CardCallToAction">
                         <div class="card-body text-center">
-                            <h4 class="card-title" ng-bind="defesa.numero"></h4>
+                            <h4 class="card-title" ng-bind="item.numero"></h4>
                             <p class="card-text">
-                                {{defesa.descricao}}
+                                {{item.descricao}}
                             </p>
 
-                            <a class="card-link" href="{{defesa.link}}" target="_blank">Ver Defesa mendos vasada</a>
+                            <a class="card-link" href="{{item.link}}" target="_blank">Ver Artilharia/Defesa</a>
 
                         </div>
                     </div>
