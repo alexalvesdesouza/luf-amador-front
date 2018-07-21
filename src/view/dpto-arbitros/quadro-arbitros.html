@@ -21,19 +21,40 @@
             <h1 class="text-left PageTitleHeader">Quadro de Árbitros</h1>
         </header>
 
-        <div class="Conteudo">
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-2 mb-4" ng-repeat="arbitro in arbitros">
+
+                    <div class="col-mb-4" style="background-color: #bb1414; border-radius: 5px;">
+                        <div class="box box-solid bg-red">
+                            <div class="box-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <a>
+                                            <img src="/assets/arbitros/{{arbitro.image}}.jpg" width="120px" height="120px" class="rounded" style="padding: 7px; border-radius: 5px;">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-6" style="color: #f9f9f9 !important; padding-top: 7px;">{{arbitro.nome}}</div>
+                                    <div class="col-md-6" style="color: #f9f9f9 !important; padding-top: 7px; margin-left: 10px;">{{arbitro.funcao}}</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div ng-include="'/templates/footer.html'"></div>
+            <div ng-include="'/templates/after-footer.html'"></div>
 
         </div>
-
-        <div ng-include="'/templates/footer.html'"></div>
-        <div  ng-include="'/templates/after-footer.html'"></div>
-
-    </div>
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/popper.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/angular.min.js"></script>
-    <script src="/scripts/dpto-arbitros.js"></script>
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/popper.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/angular.min.js"></script>
+        <script src="/scripts/dpto-arbitros.js"></script>
 </body>
 
 </html>
