@@ -8,8 +8,8 @@ tjdu.controller("tjduCtrl", function ($scope, $filter, $http) {
     $scope.resultados = [];
     $scope.portarias = [];
     $scope.tabelaCampeonato = {};
-    const BASE_PATH = "http://localhost:9090/tjdus";
-    // const BASE_PATH = "http://96.126.124.99:9090/tjdus";
+    // const BASE_PATH = "http://localhost:9090/tjdus";
+    const BASE_PATH = "http://96.126.124.99:9090/tjdus";
 
     var carregarEditais = function () {
         $http
