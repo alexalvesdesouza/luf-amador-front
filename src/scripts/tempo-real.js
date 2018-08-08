@@ -8,7 +8,7 @@ tempoReal.controller("tempoRealCtrl", function ($scope, $filter, $http, $interva
     $scope.tabelaCampeonato = {};
     
     //const BASE_PATH = "http://localhost:9090/jogos";
-    const BASE_PATH = "http://198.58.119.136:9090/jogos";
+    const BASE_PATH = "http://96.126.124.99:9090/jogos";
 
     var carregarTabelasJogos = function () {
         $http

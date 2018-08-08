@@ -11,18 +11,6 @@ app.controller("appCtrl", function ($scope, $filter, $http, $interval) {
         $scope.headerContent = headerContent;        
     };
 
-    $scope.disputas = [
-        {
-            confronto: {
-                desafiante: {
-                    nome: 'Tocantins',
-                    gols: ''
-                }
-            }
-        }
-
-    ];
-
     // var updateClock = function() {
     //     $scope.clock = new Date();
     //     // alert($scope.clock);

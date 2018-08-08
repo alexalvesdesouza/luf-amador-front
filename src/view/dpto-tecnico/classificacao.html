@@ -18,7 +18,7 @@
         <div ng-include="'/templates/header.html'"></div>
         <div ng-include="'/templates/menu.html'"></div>
         <header class="content-header my-2">
-            <h1 class="text-left PageTitleHeader">Classificação</h1>
+            <h4 class="text-left PageTitleHeader">Classificação</h4>
         </header>
 
         <div class="Conteudo container">
@@ -39,6 +39,7 @@
                     <thead>
                         <tr>
                             <th scope="col">Posição</th>
+                            <th scope="col">Chave</th>
                             <th scope="col">Escudo</th>
                             <th scope="col">Equipe</th>
                             <th scope="col">JG - Jogos</th>
@@ -54,7 +55,10 @@
                                 <span ng-bind="classificacao.posClassificacao"></span>
                             </td>
                             <td>
-                                <img src="/assets/agremiacoes/{{classificacao.agremiacao.nomeSigla}}.png" alt="" height="30" width="30">
+                                <span ng-bind="classificacao.chave"></span>
+                            </td>
+                            <td>
+                                <img src="{{classificacao.agremiacao.image}}" alt="" height="30" width="30">
                             </td>
                             <td>
                                 <span ng-bind="classificacao.agremiacao.nome"></span>
