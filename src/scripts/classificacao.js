@@ -6,8 +6,8 @@ classificacao.controller("classificacaoCtrl", function ($scope, $filter, $http, 
     $scope.classificacoes = [];
     $scope.categoria = 'AMADOR_ESPECIAL';
     
-    const BASE_PATH = "http://localhost:9090/classificacoes";
-    //const BASE_PATH = "http://96.126.124.99:9090/classificacoes";
+    //const BASE_PATH = "http://localhost:9090/classificacoes";
+    const BASE_PATH = "http://96.126.124.99:9090/classificacoes";
 
     $scope.selecionaCategoria = function(cat) {
         $scope.categoria = cat;

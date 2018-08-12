@@ -9,8 +9,8 @@ tempoReal.controller("tempoRealCtrl", function ($scope, $filter, $http, $interva
     $scope.categoriaSelecionada = '';
     $scope.categoria = 'AMADOR_ESPECIAL';
     
-    const BASE_PATH = "http://localhost:9090/jogos";
-    //const BASE_PATH = "http://96.126.124.99:9090/jogos";
+    //const BASE_PATH = "http://localhost:9090/jogos";
+    const BASE_PATH = "http://96.126.124.99:9090/jogos";
 
     var carregarTabelasJogos = function () {
         var cat = $scope.categoria;
