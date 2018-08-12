@@ -24,14 +24,17 @@
         <div class="Conteudo container">
 
             <div class="row">
-                <select class="form-control">
-                    <option value="" ng-disabled="true" ng-selected="true">Selecione um campeonato</option>
-                    <option>Amador - Especial</option>
-                    <option>Amador - Acesso</option>
-                    <option>Juniores</option>
-                    <option>Veteranos</option>
-                    <option>Rural</option>
-                </select>
+                <div class="col-md-4 col-lg-2">
+                    <button type="button" 
+                            ng-click="selecionaCategoria('AMADOR_ESPECIAL')" 
+                            class="btn btn-outline-primary btn-block">AMADOR ESPECIAL</button>
+                </div>
+                <div class="col-md-4 col-lg-2">
+                    <button type="button" 
+                            ng-click="selecionaCategoria('AMADOR_ACESSO')" 
+                            style="margin-left: 1px;"
+                            class="btn btn-outline-secondary btn-block">AMADOR ACESSO</button>
+                </div>
             </div>
 
             <div class="table-responsive-xl">

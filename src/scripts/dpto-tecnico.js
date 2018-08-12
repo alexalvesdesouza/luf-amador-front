@@ -6,6 +6,7 @@ dptoTecnico.controller("dptoTecnicoCtrl", function ($scope, $filter, $http) {
 
     $scope.tabelaJogos = [];
     $scope.resultadoJogos = [];
+    $scope.categoria = 'AMADOR_ESPECIAL';
     $scope.editais = [];
     $scope.artilhariasDefesas = [];
     $scope.comunicados = [];
@@ -14,12 +15,12 @@ dptoTecnico.controller("dptoTecnicoCtrl", function ($scope, $filter, $http) {
     $scope.artilharia = [];
     $scope.defesa = [];
     $scope.tabelaCampeonato = {};
-    // const BASE_PATH_TECNICO = "http://localhost:9090/departamento-tecnico";
-    // const BASE_PATH_TABELA = "http://localhost:9090/tabela-jogos";
-    // const BASE_PATH_JOGOS = "http://localhost:9090/jogos";
-    const BASE_PATH_TABELA = "http://96.126.124.99:9090/tabela-jogos";
-    const BASE_PATH_JOGOS = "http://96.126.124.99:9090/jogos";
-    const BASE_PATH_TECNICO = "http://96.126.124.99:9090/departamento-tecnico";
+    const BASE_PATH_TECNICO = "http://localhost:9090/departamento-tecnico";
+    const BASE_PATH_TABELA = "http://localhost:9090/tabela-jogos";
+    const BASE_PATH_JOGOS = "http://localhost:9090/jogos";
+    // const BASE_PATH_TABELA = "http://96.126.124.99:9090/tabela-jogos";
+    // const BASE_PATH_JOGOS = "http://96.126.124.99:9090/jogos";
+    // const BASE_PATH_TECNICO = "http://96.126.124.99:9090/departamento-tecnico";
 
     var carregarEditais = function () {
         $http
@@ -33,6 +34,11 @@ dptoTecnico.controller("dptoTecnicoCtrl", function ($scope, $filter, $http) {
                 console.log(data);
             });
     };
+
+    $scope.selecionaCategoria = function(cat) {
+        $scope.categoria = cat;
+        carregarResultadoJogos();
+    }
 
     var carregarTabelasJogos = function () {
         $http
@@ -99,7 +105,7 @@ dptoTecnico.controller("dptoTecnicoCtrl", function ($scope, $filter, $http) {
 
     var carregarResultadoJogos = function () {
         $http
-            .get(BASE_PATH_JOGOS + '/resultados')
+            .get(BASE_PATH_JOGOS + '/resultados/' + $scope.categoria)
             .success(function (ret) {
                 $scope.resultadoJogos = [];
                 if (ret.length) {

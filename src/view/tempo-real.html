@@ -11,9 +11,19 @@
     <link href="/css/bootstrap.css" rel="stylesheet">
     <link href="/css/styles.css" rel="stylesheet">
 
+    <style>
+        .newGol {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            z-index: +1;
+        }
+    </style>
+
 </head>
 
 <body>
+
     <div class="">
 
         <div ng-include="'/templates/header.html'"></div>
@@ -22,16 +32,21 @@
             <h4 class="text-left PageTitleHeader">Tempo Real</h4>
         </header>
 
+        <img class="newGol" ng-if="isNewGol" src="/assets/balls sport 4.gif" alt="">
+
         <div class="Conteudo container">
             <div class="row">
-                <select class="form-control">
-                    <option value="" ng-disabled="true" ng-selected="true">Selecione um campeonato</option>
-                    <option>Amador - Especial</option>
-                    <option>Amador - Acesso</option>
-                    <option>Juniores</option>
-                    <option>Veteranos</option>
-                    <option>Rural</option>
-                </select>
+                <div class="col-md-4 col-lg-2">
+                    <button type="button" 
+                            ng-click="selecionaCategoria('AMADOR_ESPECIAL')" 
+                            class="btn btn-outline-primary btn-block">AMADOR ESPECIAL</button>
+                </div>
+                <div class="col-md-4 col-lg-2">
+                    <button type="button" 
+                            ng-click="selecionaCategoria('AMADOR_ACESSO')" 
+                            style="margin-left: 1px;"
+                            class="btn btn-outline-secondary btn-block">AMADOR ACESSO</button>
+                </div>
             </div>
 
             <div class="table-responsive-xl">
@@ -44,6 +59,7 @@
                             <th scope="col">Agremiacao A</th>
                             <th scope="col">Esc</th>
                             <th scope="col">PLA</th>
+                            <th scope="col"></th>
                             <th scope="col">PLB</th>
                             <th scope="col">Esc</th>
                             <th scope="col">Agremiacao B</th>

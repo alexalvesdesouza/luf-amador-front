@@ -4,9 +4,10 @@ dptoArbitros.controller("dptoArbitrosCtrl", function ($scope, $filter, $http) {
     $scope.titulo = 'Classificação';
     $scope.headerContent = 'Classificação';
 
-    //const BASE_PATH = "http://localhost:9090/escalas";
+    const BASE_PATH = "http://localhost:9090/escalas";
     const BASE_PATH_ARBITROS = "http://localhost:9090/arbitros/load";
-    const BASE_PATH = "http://96.126.124.99:9090/escalas";
+    // const BASE_PATH_ARBITROS = "http://localhost:9090/arbitros/load";
+    // const BASE_PATH = "http://96.126.124.99:9090/escalas";
 
     $scope.escalas = [];
     $scope.escalaSelecionado = {};
